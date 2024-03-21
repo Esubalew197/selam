@@ -11,9 +11,8 @@ app.use(cors())
 app.use(cookieParser())
 
 
-app.get('/', (res, req) => {
-    res.json({msg: "Hello"})
-})
+// Routes
+app.use('/api', require('./routes/authRouter'))
 
 
 dotenv.config();
